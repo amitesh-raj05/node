@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMed Healthcare Business Consulting</title>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="icon" sizes="16x16" href="./Assets/getlogo.png">
+    <link rel="icon" sizes="32x32" href="./Assets/getlogo.png">
+    <link rel="icon" sizes="48x48" href="./Assets/getlogo.png">
+    <link rel="icon" sizes="96x96" href="./Assets/getlogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <img src="./Assets/getlogo.png" style="width:5vh; height:5vh;">
+            <a class="navbar-brand custom-font" href="#">
+                <span class="custom-font pro"><span> </span> Pro</span><span class="custom-font">Med </span><span
+                    class="custom-font health">Health</span><span class="custom-font">Care</span>
+            </a>
+            <button id="navbarToggler" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.ejs">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./aboutus.ejs">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./project.ejs">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./services.ejs">Services</a>
+                    </li>
+                    
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contectus.ejs">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto" role="search">
+                    <% if (isAuthenticated) { %>
+                        <button class="glow-on-hover" type="button" onclick="location.href='/logout'">
+                            <div class="login" style="font-weight: 500;">Logout</div>
+                        </button>
+                    <% } else { %>
+                        <button class="glow-on-hover" type="button" onclick="location.href='/login'">
+                            <div class="login" style="font-weight: 500;">Login</div>
+                        </button>
+                    <% } %>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hospital">
+
+    </div>
+
+
+    <div class="promed">
+        <span id="pro">Pro</span>Med</br>
+        Health<span id="Health">Care</span>
+        <span id="tagline" style="font-size: 2vh;"><span id="partner">Partnering with Hospitals</span> for Enhanced
+            <span id="solutions">HealthCare Solutions</span></span>
+
+    </div>
+
+    <br>
+
+    <div class="offer">
+        The Services We Offer
+        <hr>
+    </div>
+
+    <div class="container">
+        <ul class="cards">
+            <li class="card Plan">
+                <div class="card-overlay">
+                    <h3 class="card-title">PLANNING, EXECUTION & DESIGN</h3>
+                </div>
+                <div class="card-content">
+                    <p>Enhance your healthcare practice with expert consulting in planning, execution, and design for
+                        optimized patient care and efficiency.</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#PLANNING" class="card-link">Learn More</a>
+                </div>
+            </li>
+
+            <li class="card human">
+                <div class="card-overlay">
+                    <h3 class="card-title">HUMAN RESOURCES & PLANING</h3>
+                </div>
+                <div class="card-content">
+                    <p>Empower your team through strategic human resources consulting, ensuring effective planning and
+                        execution to boost organizational efficiency and foster employee contentment.</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#HUMAN" class="card-link">Learn More</a>
+                </div>
+            </li>
+            <li class="card finance">
+                <div class="card-overlay">
+                    <h3 class="card-title">FINANCIAL ADVISORY </h3>
+                </div>
+                <div class="card-content">
+                    <p>Enhance your financial success with expert advisory services, offering strategic planning and
+                        effective execution for sustained growth and stability</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#FINANCIAL" class="card-link">Learn More</a>
+                </div>
+            </li>
+            <li class="card Management">
+                <div class="card-overlay">
+                    <h3 class="card-title">MANANAGENT & OPERATION</h3>
+                </div>
+                <div class="card-content">
+                    <p>Streamline your business with expert management and operational consulting, ensuring efficient
+                        planning and flawless execution for superior performance</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#MANANAGENT" class="card-link">Learn More</a>
+                </div>
+            </li>
+            <li class="card Plan it">
+                <div class="card-overlay">
+                    <h3 class="card-title">HEALTHCARE IT SOLUTION</h3>
+                </div>
+                <div class="card-content">
+                    <p>Transform your practice with cutting-edge healthcare IT solutions, delivering seamless
+                        integration, robust security, and improved patient outcomes.</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#HEALTHCARE" class="card-link">Learn More</a>
+                </div>
+            </li>
+            <li class="card Plan branding">
+                <div class="card-overlay">
+                    <h3 class="card-title">PR & BRANDING</h3>
+                </div>
+                <div class="card-content">
+                    <p>Elevate your brand with expert PR and branding services, ensuring strategic communication and a
+                        compelling brand identity for maximum impact.</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#PR" class="card-link">Learn More</a>
+                </div>
+            </li>
+            <li class="card Plan equipment">
+                <div class="card-overlay">
+                    <h3 class="card-title">MEDICAL EQUIPMENT PLANNING</h3>
+                </div>
+                <div class="card-content">
+                    <p>Revitalize your facility with expert medical equipment planning, ensuring strategic selection and
+                        efficient implementation for improved patient care.</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#MEDICAL" class="card-link">Learn More</a>
+                </div>
+            </li>
+            <li class="card Plan merger">
+                <div class="card-overlay">
+                    <h3 class="card-title">MERGERS AND ACQUISITIONS</h3>
+                </div>
+                <div class="card-content">
+                    <p>Navigate mergers and acquisitions with focused guidance, ensuring smooth integration and
+                        successful transitions for sustained growth.</p>
+                </div>
+                <div class="card-link-wrapper">
+                    <a href="./services.ejs#MERGERS" class="card-link">Learn More</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <br>
+    <div class="offer">
+        Why Believe In Us?
+        <hr>
+    </div>
+    <div class="container" id="custom-cards">
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                EXPERIENCE<i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p><b>4+ Years</b> of Experience in Delivering HealthCare Consulting.
+                </p>
+            </div>
+        </div>
+        <!-- Additional content that will be pushed down -->
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                ACHIEVING EXCELLENCE<i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p>We have Enabled <b>25+ Hospitals</b> Reach <b>NABH</b> Level</p>
+            </div>
+        </div>
+
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                COST EFFICIENCY <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p>Achieved Cost Reduction to the Tune of <b>30%</b></p>
+            </div>
+        </div>
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                RISK ANALYSIS <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p>Reduced Risk & <b>Recovered 96% of Cost</b> From Corporates & Third Parties.</p>
+            </div>
+        </div>
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                100% COMPILANCE <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p>Achieved 100% Compliance With <b>Paperless EMR</b> via Our Integrated SmartCare HIMS</p>
+            </div>
+        </div>
+
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                MANAGEMENT <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p>Quantitavely Managed Hospital With <b>360 degree</b> Realtime KPIS - Balanced ScoreCard</p>
+            </div>
+        </div>
+
+        <div class="dropdown-bar">
+            <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+                FACILITY <i class="fas fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <p><B>10+</B> In-house Consultant and <b>1000+</b> Managing Globally</p>
+            </div>
+        </div>
+
+        
+
+
+    </div>
+
+    <br>
+    <br>
+
+    <div class="offer">
+        Get Expert Guidance
+        <hr>
+    </div>
+    <div class="container" id="custom-cards">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
+                <!-- Content on the left side -->
+                <div class="col">
+                    <div class="row row-cols-1 row-cols-sm-2 g-4">
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center fs-4 rounded-circle">
+                                <svg class="bi" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <image xlink:href="./Assets/question.png" width="100%" height="100%" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-bold mb-0 text-body-emphasis">Can I achieve this?</h4>
+                            <br>
+                            <!-- <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p> -->
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center fs-4 rounded-circle">
+                                <svg class="bi" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <image xlink:href="./Assets/gear.png" width="100%" height="100%" />
+                                </svg>
+
+                            </div>
+                            <h4 class="fw-bold mb-0 text-body-emphasis">What does it entail?</h4>
+                            <br>
+                            <!-- <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p> -->
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center fs-4 rounded-circle">
+                                <svg class="bi" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <image xlink:href="./Assets/map1.png" width="100%" height="100%" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-bold mb-0 text-body-emphasis">How do I proceed?</h4>
+                            <br>
+                            <!-- <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p> -->
+                        </div>
+
+                        <div class="col d-flex flex-column gap-2">
+                            <div
+                                class="feature-icon-small d-inline-flex align-items-center justify-content-center fs-4 rounded-circle">
+                                <svg class="bi" width="1em" height="1em" xmlns="http://www.w3.org/2000/svg">
+                                    <image xlink:href="./Assets/exclamation.png" width="100%" height="100%" />
+                                </svg>
+                            </div>
+                            <h4 class="fw-bold mb-0 text-body-emphasis">Where do I start?</h4>
+                            <br>
+                            <!-- <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading.</p> -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content on the right side -->
+                <div class="col d-flex flex-column align-items-start gap-2">
+                    <h2 class="fw-bold text-body-emphasis">Feeling Overwhelmed by These Questions!</h2>
+                    <p class="text-body-secondary">Don't worry. Sit back, relax, and let us handle the rest. We're here
+                        to clear away any confusion and guide you through each stage.</p>
+                    <a href="./contectus.ejs" class="btn btn-primary btn-lg d-grid justify-content-center"
+                        style="background-color: #1bb0eb; border-color: #1bb0eb;">
+                        Contact Us
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Example SVG icons for demonstration purposes -->
+
+    </div>
+
+
+    <div class="footer" style="background-color:#ebebeb;margin: 0;padding: 0;">
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="./index.ejs" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="./aboutus.ejs" class="nav-link px-2 text-body-secondary">About Us</a></li>
+                    <li class="nav-item"><a href="./project.ejs" class="nav-link px-2 text-body-secondary">Projects</a></li>
+                    <li class="nav-item"><a href="./services.ejs" class="nav-link px-2 text-body-secondary">Services</a></li>
+                    
+                    <li class="nav-item"><a href="./contectus.ejs" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2024 ProMed HealthCare Business Consulting, Inc</p>
+            </footer>
+        </div>
+    </div>
+
+
+
+
+    <!-- Link to the external JavaScript file -->
+    <script src="./js/index.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
