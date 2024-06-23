@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" type="text/css" href="css/services.css">
+    <link rel="icon" sizes="16x16" href="./Assets/getlogo.png">
+    <link rel="icon" sizes="32x32" href="./Assets/getlogo.png">
+    <link rel="icon" sizes="48x48" href="./Assets/getlogo.png">
+    <link rel="icon" sizes="96x96" href="./Assets/getlogo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-body-tertiary fixed-top">
+        <div class="container-fluid">
+            <img src="./Assets/getlogo.png" style="width:5vh; height:5vh;">
+            <a class="navbar-brand custom-font" href="#">
+                <span class="custom-font pro">Pro</span><span class="custom-font">Med </span><span
+                    class="custom-font health">Health</span><span class="custom-font">Care</span>
+            </a>
+            <button id="navbarToggler" class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link " aria-current="page" href="index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="aboutus">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project">Projects</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services">Services</a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="./contectus">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex ms-auto" role="search">
+                    <% if (isAuthenticated) { %>
+                        <button class="glow-on-hover" type="button" onclick="location.href='/logout'">
+                            <div class="login" style="font-weight: 500;">Logout</div>
+                        </button>
+                    <% } else { %>
+                        <button class="glow-on-hover" type="button" onclick="location.href='/login'">
+                            <div class="login" style="font-weight: 500;">Login</div>
+                        </button>
+                    <% } %>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class=" back">
+        <div class="px-4 py-5 my-5 text-center" style="margin-top: 0 !important; padding-top: 0 !important;">
+            <br>
+            <br>
+            <br><br><br><br><br>
+
+            <h1 class="display-5 fw-bold" style="color: white; font-size: 10vw;">
+                <span id="header" style="color: red; font-size: inherit;">Know</span> Our
+                <span id="header1" style="color: #1bb0eb; font-size: inherit;">Pros</span>
+                <hr style="margin: 0 20vw;">
+            </h1>
+
+
+            <div class="col-lg-6 mx-auto">
+
+                <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+                    <br><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container marketing">
+        <!-- Three columns of text below the carousel -->
+        <div class="offer">
+            Our Services
+            <hr>
+        </div>
+
+
+        <!-- START THE FEATURETTES -->
+        
+            <!-- Featurette Container -->
+            <div id="PLANNING" class="row featurette featurette-container left" onmouseover="showLead(this)" onmouseout="hideLead(this)">
+                <!-- Left Column -->
+                <div class="col-md-7 d-flex flex-column justify-content-center align-items-center text-center">
+                    <h2 class="featurette-heading fw-normal lh-1">PLANNING EXECUTION & DESIGN</h2>
+                    <p class="lead" style="text-align: justify;">Effective planning, meticulous execution, and thoughtful design are pivotal in enhancing the efficiency and patient experience within a hospital environment. From optimizing workflow to ensuring patient safety and comfort, every detail counts. At ProMed Consulting, we specialize in tailored healthcare consulting services aimed at streamlining operations, implementing strategic initiatives, and enhancing facility design. With our expertise and proven track record, we empower healthcare providers to achieve operational excellence and deliver exceptional care. Whether it's revamping infrastructure, optimizing resource allocation, or integrating cutting-edge technologies, we are committed to transforming your vision into reality, ensuring your hospital operates at its highest potential while prioritizing patient-centric care.</p>
+                    <p class="lead1" style="text-align: justify;">Hower to Know</p>
+                </div>
+                <!-- Right Column -->
+                <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
+                        <title>Placeholder</title>
+                        <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                        <image xlink:href="./Assets/service11.jpg" width="500" height="500" preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+                    </svg>
+                </div>
+            </div>
+        
+        <div id="HUMAN"class="row featurette featurette-container right"  onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">HUMAN RESOURCES & PLANING <span
+                        class="text-body-secondary"></span></h2>
+                <p class="lead" style="text-align: justify;">Human resources and planning are essential for optimizing
+                    workforce capabilities and aligning with business goals. Effective HR management includes talent
+                    acquisition, development, and retention strategies, while strategic planning involves forecasting
+                    needs and structuring operations for long-term success. ProMed Consulting specializes in
+                    healthcare-specific HR and planning solutions, empowering institutions to streamline operations and
+                    enhance staff performance to achieve operational excellence and deliver superior patient care.</p>
+                    <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/service/Handshake.jpg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+
+                </svg>
+            </div>
+        </div>
+
+        <div id="FINANCIAL"id="PLANNING"class="row featurette featurette-container left"onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">FINANCIAL ADVISORY <span
+                        class="text-body-secondary"></span></h2>
+                <p class="lead" style="text-align: justify;">
+                    Financial advisory services play a pivotal role in guiding individuals and businesses towards
+                    achieving their financial goals. These services encompass a wide range of expertise, including
+                    investment planning, wealth management, retirement planning, tax optimization, and risk management
+                    strategies. At ProMed Consulting, our financial advisory team offers personalized solutions tailored
+                    to meet the unique needs of our clients. Whether you are planning for retirement, managing
+                    investments, or navigating complex financial decisions, we provide expert guidance to help you make
+                    informed choices and secure your financial future.</p>
+                    <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+            </div>
+            <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/service/finance-investment.jpeg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+
+                </svg>
+
+
+            </div>
+        </div>
+
+
+        <div id="MANANAGENT"class="row featurette featurette-container right"onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">MANANAGENT & OPERATION <span
+                        class="text-body-secondary"></span></h2>
+                <p class="lead" style="text-align: justify;">Management and operations are critical for organizational
+                    success, involving strategic planning, resource allocation, and process optimization. Effective
+                    management ensures cohesive leadership and goal attainment, while operations focus on efficient
+                    execution and workflow management. ProMed Consulting specializes in healthcare management and
+                    operations, enhancing efficiency, quality of care, and organizational performance through tailored
+                    solutions and strategic initiatives, empowering healthcare providers to achieve exceptional patient
+                    outcomes and navigate industry challenges with confidence.</p>
+                    <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/management.jpeg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+                </svg>
+            </div>
+        </div>
+        <div id="HEALTHCARE"class="row featurette featurette-container left"onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">HEALTHCARE IT SOLUTIONS <span
+                        class="text-body-secondary"></span></h2>
+                <p class="lead" style="text-align: justify;">
+                    Healthcare IT solutions are essential for modernizing healthcare delivery, integrating electronic
+                    health records (EHR), telemedicine, data analytics, and cybersecurity. These innovations streamline
+                    operations, improve patient care coordination, and enhance overall efficiency. ProMed Consulting
+                    specializes in tailored healthcare IT solutions, empowering providers to implement robust EHR
+                    systems, ensure data security, and facilitate remote patient monitoring. By leveraging technology
+                    effectively, we enable healthcare institutions to deliver superior care, meet regulatory
+                    requirements, and achieve optimal patient outcomes.</p>
+                    <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+            </div>
+            <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/service/it-2.jpg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+
+                </svg>
+
+
+            </div>
+
+
+        </div>
+
+        <div id="PR"class="row featurette featurette-container right"onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">PR & BRANDING <span class="text-body-secondary"></span>
+                </h2>
+                <p class="lead" style="text-align: justify;">PR (Public Relations) and branding are critical elements
+                    for shaping a company's reputation and market presence. PR involves managing communication with
+                    various stakeholders, fostering positive relationships, and enhancing public perception. Branding
+                    focuses on creating a distinctive identity, values, and messaging that resonate with target
+                    audiences. ProMed Consulting offers comprehensive PR and branding services tailored for healthcare
+                    providers. We strategize effective communication campaigns, cultivate a positive public image, and
+                    develop compelling brand narratives. Our expertise helps healthcare institutions build trust,
+                    differentiate themselves in the market, and effectively engage with their communities to achieve
+                    long-term success.</p>
+                    <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/service/BRANDING.jpeg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+
+                </svg>
+            </div>
+        </div>
+
+        <div id="MEDICAL" class="row featurette featurette-container left"onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">MEDICAL EQUIPMENT PLANNING <span
+                        class="text-body-secondary"></span></h2>
+                <p class="lead" style="text-align: justify;">
+                    Medical equipment planning is crucial for healthcare facilities to optimize operations and enhance
+                    patient care. It involves strategic assessment, procurement, and integration of equipment to improve
+                    clinical workflows and ensure timely availability. ProMed Consulting specializes in tailored medical
+                    equipment planning, offering expertise in selecting and deploying technologies that meet
+                    facility-specific needs and enhance efficiency. Our solutions streamline procurement processes and
+                    support healthcare providers in delivering high-quality care seamlessly.</p>
+                    <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+            </div>
+            <div class="col-md-5 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto " style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/service/equip.jpg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+
+                </svg>
+            </div>
+        </div>
+
+        <div id="MERGERS"class="row featurette featurette-container right"onmouseover="showLead(this)" onmouseout="hideLead(this)">
+            <div class="col-md-7 order-md-2 d-flex flex-column justify-content-center text-center">
+                <h2 class="featurette-heading fw-normal lh-1">MERGERS AND ACQUISITIONS <span
+                        class="text-body-secondary"></span>
+                </h2>
+                <p class="lead" style="text-align: justify;">Mergers and acquisitions (M&A) are strategic transactions
+                    where companies combine assets or operations to achieve growth or synergy. M&A can expand market
+                    reach, diversify product offerings, or streamline operations. ProMed Consulting provides expert
+                    guidance in M&A activities within the healthcare sector, facilitating seamless transitions,
+                    maximizing value, and ensuring regulatory compliance. Our approach supports organizations in
+                    navigating complex transactions to achieve strategic objectives effectively.
+                </p>
+                <p class="lead1" style="text-align: justify; text-align: center;">Hower to Know</p>
+
+            </div>
+            <div class="col-md-5 order-md-1 d-flex flex-column justify-content-center align-items-center text-center">
+                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" style="border-radius: 10px;" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="#55595c"></rect> <!-- Placeholder background color -->
+                    <image xlink:href="./Assets/service/ma.jpg" width="500" height="500"
+                        preserveAspectRatio="xMidYMid slice"></image> <!-- Replace with your JPEG image path -->
+
+                </svg>
+            </div>
+        </div>
+        <!-- /END THE FEATURETTES -->
+    </div>
+
+    <div class="footer" style="background-color:#ebebeb;margin: 0;padding: 0;">
+        <div class="container">
+            <footer class="py-3 my-4">
+                <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                    <li class="nav-item"><a href="./index" class="nav-link px-2 text-body-secondary">Home</a></li>
+                    <li class="nav-item"><a href="./aboutus" class="nav-link px-2 text-body-secondary">About Us</a></li>
+                    <li class="nav-item"><a href="./project" class="nav-link px-2 text-body-secondary">Projects</a></li>
+                    <li class="nav-item"><a href="./services" class="nav-link px-2 text-body-secondary">Services</a></li>
+                    
+                    <li class="nav-item"><a href="./contectus" class="nav-link px-2 text-body-secondary">Contact Us</a></li>
+                </ul>
+                <p class="text-center text-body-secondary">© 2024 ProMed HealthCare Business Consulting, Inc</p>
+            </footer>
+        </div>
+    </div>
+
+
+    <script src="./js/services.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.0/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>
