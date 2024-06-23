@@ -127,7 +127,7 @@ app.get(
       {
         clientID: process.env.GOOGLE_CLIENT_ID,
         clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-        callbackURL: "http://localhost:2000/auth/log/sign",
+        callbackURL: "https://node-9bj2.onrender.com/auth/log/sign",
         userProfileURL: "https://www.googleapis.com/oauth2/v3/userinfo",
       },
       async (accessToken, refreshToken, profile, cb) => {
